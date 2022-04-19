@@ -10,9 +10,8 @@ module load 2020
 module load Python/3.8.2-GCCcore-9.3.0
 
 # prepare the input
-
 # best practices of changing working directory: home directory is slow
-cp -r $HOME/run3 $TMPDIR
+cp -r $home/myfolder $TMPDIR
 cd $TMPDIR
 
 # run the main task
@@ -20,7 +19,7 @@ echo "The analysis will start to run shortly"
 python myscript.py input.dat
 
 # save your output
-mkdir -p $HOME/run3/results
-cp result.dat run3.log $HOME/run3/results
+mkdir -p $home/myfolder/results
+cp -r result.dat myfolder.log $home/myfolder/results
 
 
