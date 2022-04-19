@@ -16,10 +16,11 @@ cp -r $HOME/run3 $TMPDIR
 cd $TMPDIR
 
 # run the main task
-echo "The analysis will run"
-
-srun a.out
+echo "The analysis will start to run shortly"
+python myscript.py input.dat
 
 # save your output
-cp -r $TMPDIR/* ~/results
+mkdir -p $HOME/run3/results
+cp result.dat run3.log $HOME/run3/results
+
 
