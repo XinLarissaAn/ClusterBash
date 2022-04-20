@@ -1,0 +1,29 @@
+# This is an instruction for running a job in a cluster or a supercomputer
+
+# workflow
+# 1. upload data from the computer to the cluster system
+
+# to copy a file from a local to a remote system run the following command
+scp file.text remote_username@10.10.0.2:/remote/directory
+
+# to save the file under a different name
+scp file.txt remote_username@10.10.0.2:/remote/directory/newfilename.txt
+
+# 2. log in with ssh to access the login nodes
+ssh remote_username@10.10.0.2
+
+# 3. create a job script named "job"
+# see the script named job.sh in the same directory
+
+# 4. submit the job script to the scheduler, SLURM here
+sbatch job.sh
+
+# 5. scheduler looks for available batch node
+
+# command to find out when your jobs will run
+scontrol show job job_id
+
+# inspect the status of job
+squeue -j job_id
+
+# 5. download the results to the computer when the job is finished
