@@ -26,4 +26,4 @@ scontrol show job job_id
 # inspect the status of job
 squeue -j job_id
 
-# 5. download the results to the computer when the job is finished
+# 6. download the results to the computer when the job is finished
